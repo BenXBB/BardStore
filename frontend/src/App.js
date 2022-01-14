@@ -1,10 +1,10 @@
 import './App.css';
 import HeadBanner from "./components/HeadBanner";
-import LoginPage from './components/Login';
+import LoginPage from './components/Login/Login';
 import Home from './components/Home';
 import NavBar from './components/Nav';
 import Basketfooter from './components/Basketfooter';
-import Basket from './components/Basket';
+import Basket from './components/Basket/Basket';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {

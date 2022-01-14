@@ -38,6 +38,10 @@
 /* END OF MAIN BANNER */
 
 /* NAV BAR */
+.navigation-bar {
+  border-bottom: rgb(191, 191, 191) 2px solid;
+}
+
 .navigation-bar ul {
   display: flex;
   justify-content: space-evenly;

@@ -1,0 +1,40 @@
+.basket-page {
+    text-align: center;
+}
+
+.item-flex-box-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.item-flex-box-child {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.basketimageitem {
+    width: 100px;
+}
+
+.removebtn {
+    cursor: pointer;
+    border: transparent;
+    background-color: rgb(86, 78, 247);
+    color: white;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.checkoutbtn {
+    cursor: pointer;
+    border: transparent;
+    background-color: rgb(86, 78, 247);
+    color: white;
+    padding: 10px;
+    border-radius: 10%;
+    margin-bottom: 25px;
+}
