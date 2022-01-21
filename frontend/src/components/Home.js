@@ -1,7 +1,15 @@
+import Product from "./Product";
 
 function Home() {
     return (
+
       <div className='home-page'>
+
+      <div className="flex-item-box-parent">
+          <Product />
+          <Product />
+          <Product />
+        </div>
 
         <h1 id="hurdy-gurdy">HURDY GURDY</h1>
 

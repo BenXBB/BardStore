@@ -1,28 +1,20 @@
 import './Basket.css';
+import CartItem from './CartItem';
 
 function Basket() {
     return (
     <div className='basket-page'>
-      <h3>Your Basket:</h3>
-
-        <div className="item-flex-box-parent">
-
-          <div className="item-flex-box-child">
-           <img className="basketimageitem" src="https://5.imimg.com/data5/VP/CN/MY-2807545/sitar-500x500.jpg" alt="sitar1" />
-            <p>SITAR</p>
-            <p>£1,000</p>
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-            <button className="removebtn">Remove</button>
+      <h3 className="basketheadertext">Shopping Cart</h3>
+      <div className="basket-flex-box-parent">
+        <CartItem />
+        <CartItem />
+        <CartItem />
+         <div className="checkout-section">
+          <h3>Subtotal (1) item(s)</h3>
+          <p><h3>£1,000 <span className="VATtext">ex VAT</span></h3></p>
+          <button className="checkoutbtn">Proceed To Checkout</button>
           </div>
-      </div>
-      <h3>Total price £1,000</h3>
-      <button className="checkoutbtn">Checkout</button>
+        </div>
     </div>
     );
   }

@@ -2,10 +2,15 @@
     text-align: center;
 }
 
-.item-flex-box-parent {
+.basketheadertext {
+    font-size: 2rem;
+}
+
+.basket-flex-box-parent {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 18px;
 }
 
@@ -14,6 +19,9 @@
     align-content: center;
     align-items: center;
     gap: 20px;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 5px;
+    padding: 10px;
 }
 
 .basketimageitem {
@@ -23,18 +31,28 @@
 .removebtn {
     cursor: pointer;
     border: transparent;
-    background-color: rgb(86, 78, 247);
+    background-color: rgb(53, 53, 53);
     color: white;
     padding: 10px;
     border-radius: 10%;
 }
 
+.VATtext {
+    font-size: 0.9rem;
+}
+
 .checkoutbtn {
     cursor: pointer;
     border: transparent;
-    background-color: rgb(86, 78, 247);
+    background-color: rgb(53, 53, 53);
     color: white;
     padding: 10px;
-    border-radius: 10%;
     margin-bottom: 25px;
+}
+
+.checkout-section {
+    display: block;
+    background-color: rgb(242, 242, 242);
+    padding: 0 20px;
+    margin: 20px 20px;
 }
