@@ -9,10 +9,10 @@ function Basketfooter() {
         </div>
         <hr />
         <div className='basket-footer'>
+        <a href="/basket"><img id="shopping-basket" src="https://cdn-icons-png.flaticon.com/512/2636/2636890.png" alt="basket-icon" /></a>
             <div>
-                <a href="/basket"><p>SHOPPING CART: <span>0</span></p></a>
+                <a href="/basket"><p>CART <span className="basketnumber">0</span></p></a>
             </div>
-            <a href="/basket"><img id="shopping-basket" src="https://cdn-icons-png.flaticon.com/512/2636/2636890.png" alt="basket-icon" /></a>
         </div>
     </div>
     );

@@ -12,20 +12,13 @@ function App() {
 
   const [apiTest, setApiTest] = useState([]);
 
-  function callAPI() {
-    fetch("http://localhost:9000/testAPI")
-        .then(res => res.text())
-        .then(res => setApiTest({ apiResponse: res }));
-};
-
-useEffect(() => {
-  fetch("http://localhost:9000/testAPI")
-  .then(res => { res.text()
-    .then(res => { setApiTest({ apiResponse: res });
-          console.log(apiTest)
-      });
+  useEffect(() => {
+    fetch("http://localhost:9000/testAPI").then(res => {
+      if(res.ok) {
+        return res.text();
+      }
+    }).then(jsonRes => setApiTest(jsonRes)).then(console.log(apiTest))
   })
-}, []) // Dependency array
 
   return (  
     <div className="app">
@@ -34,7 +27,6 @@ useEffect(() => {
         <span className="headertitle">EMAIL &nbsp;<img className="contactUsIcon" src="https://cdn-icons.flaticon.com/png/512/2099/premium/2099199.png?token=exp=1642104422~hmac=f44bd6cbb5df0cef80b07ac3ef7295b6" alt="email-us" />&nbsp;SHOP@BARDSTORE.CO.UK</span>
         <span className="loginlink"><a href="/login">CREATE AN ACCOUNT/SIGN IN</a></span>
       </header>
-
       <a href="/"><HeadBanner /></a>
       <NavBar />
           <Router>

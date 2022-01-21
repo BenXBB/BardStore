@@ -101,6 +101,11 @@
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.flex-item-box button:hover {
+  background-color: #333;
 }
 
 /* END OF HOME CONTENT */
@@ -127,8 +132,8 @@
 .basket-footer {
   position: fixed;
   bottom: 0;
-  background-color: rgb(187, 187, 187);
-  color: #333;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -140,14 +145,20 @@
 
 .basket-footer span {
   font-weight: 700;
+  margin-right: 15px;
+}
+
+.basketnumber {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0 7px;
 }
 
 #shopping-basket {
-  width: 40px;
-  background-color: green;
+  width: 15px;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   padding: 5px;
-  margin-right: 15px;
 }
 /* END OF BASKET FOOTER */
 

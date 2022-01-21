@@ -11,7 +11,7 @@ function LoginPage() {
         </p>
         <p className="submit"><input type="submit" name="commit" value="Login" /></p>
       </form>
-      <button type="button" className="login-with-google-btn" >Sign in with Google</button>
+      <a href="/auth/google"><button type="button" className="login-with-google-btn" >Sign in with Google</button></a>
     </div>
     );
   }
