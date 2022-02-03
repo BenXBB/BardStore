@@ -1,5 +1,3 @@
-// run  b
-
 const products = [
     {
         name: 'HURDY GURDY "RUSTIC"',
@@ -65,8 +63,8 @@ const products = [
         price: 1050
     },
     {
-        name: 'LUTE "CALABASH"',
-        imageUrl: 'https://chinantique.fr/wp-content/uploads/2019/12/OD024_Instrument-musique-indien4.jpg',
+        name: 'SITAR "CALABASH"',
+        imageUrl: 'https://carbonsitars.com/images/ModelA.jpg',
         dispatched: '14 working days',
         availability: 'On demand',
         price: 850

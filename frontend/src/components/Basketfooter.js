@@ -1,5 +1,15 @@
+import { useSelector }  from "react-redux";
+
 function Basketfooter() {
+
+    const cart = useSelector(state => state.cart);
+    const {cartItems} = cart;
+
+
     return (
+
+
+
     <div className="web-footer">
         <hr />
         <div className="footer-signoff">

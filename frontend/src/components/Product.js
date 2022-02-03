@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/actions/cartActions";
 
-function Product() {
+function Product({imageUrl, name, price, dispatched, availability, productId, match, history}) {
+
+  const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(productId));
+    history.push("/basket");
+  }
+
     return (
       <div className='flex-item-box'>
-          <img className="item-for-sale" src ="https://cdn.shopify.com/s/files/1/1814/0429/products/hurdy-gurdies-musicmakers-hurdy-gurdy-w-gig-bag-13709818331232.jpg?v=1575933152" alt="" />
+          <img className="item-for-sale" src ={imageUrl} alt={name} />
 
             <div className="itemInfo">
-              <h1>HURDY GURDY "RUSTIC"</h1>
-              <p>Availability: On demand</p>
-              <p>Dispatched within: Waiting list</p>
-              <p>£1,050</p>
-              <Link to={`/product/${1111}`} className="info_button">View</Link>
+              <h1>{name}</h1>
+              <p>{availability}</p>
+              <p>{dispatched}</p>
+              <p>£{price}</p>
+              <Link to={`/product/${productId}`} className="info_button">View</Link>
             </div>
 
-        <button>ADD TO CART</button>
+        <button type="button" onClick={addToCartHandler}>ADD TO CART</button>
       </div>
     );
   }
