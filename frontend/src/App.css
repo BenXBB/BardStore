@@ -175,6 +175,11 @@
   font-size: 1.3rem;
 }
 
+#addedtobasketnotification {
+  color: rgb(44, 44, 44);
+  padding-right: 15px;
+}
+
 .cartcomponent {
   color: white;
   margin-right: 5px;
@@ -183,8 +188,11 @@
 }
 
 .basketnumber {
-  border-radius: 45%;
+  border-radius: 30%;
+  font-weight: 600;
+  font-size: 1.3rem;
   background-color: white;
+  color: #494949;
   padding: 0 5px;
   margin-right: 5px;
 }

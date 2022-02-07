@@ -1,11 +1,7 @@
 import Product from "./Product";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts as listProducts } from "../redux/actions/productActions";
-
-//Actions 
-import { getProductDetails } from "../redux/actions/productActions";
-import { addToCart } from "../redux/actions/cartActions";
 
 function Home({match, history}) {
 

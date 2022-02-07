@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/actions/cartActions";
+import '../App.css';
 
 function Product({imageUrl, name, price, dispatched, availability, productId, match, history}) {
 
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
+
+    var element = document.getElementById("addedtobasketnotification")
+
     dispatch(addToCart(productId));
+    element.style.color = "white";
+    setTimeout(() => {
+      element.style.color = "rgb(44, 44, 44)";
+    }, 1500);
     history.push("/basket");
   }
 

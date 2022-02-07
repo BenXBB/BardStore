@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const productRoutes = require("./routes/productRoutes");
 const authRoutes = require("./routes/auth-routes");
+const profileRoutes = require("./routes/profile-routes");
 const passport = require("passport");
 const passportSetup = require("./config/passport-setup");
 const cookieSession = require('cookie-session');
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/auth", authRoutes);
+app.use("/profile", profileRoutes);
 
 const PORT = process.env.PORT || 9000;
 

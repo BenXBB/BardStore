@@ -19,13 +19,13 @@ function Basket() {
     dispatch(removeFromCart(id));
   }
 
-  const getCartCount = () => {
-    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
-  }
-
   const getCartSubTotal = () => {
-    return cartItems.reduce((price, item) => (item.price * item.qty) + price, 0)
-  }
+    let price = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+      price += cartItems[i].price;
+    };
+    return price;
+  };
 
     return (
     <div className='basket-page'>
@@ -43,11 +43,14 @@ function Basket() {
             />
           ))}
 
-         <div className="checkout-section">
-          <h3>Subtotal ({getCartCount()}) item(s)</h3>
+        {cartItems.length === 0 ? (<div>...</div>) :
+          <div className="checkout-section">
+          <h3>Subtotal ({cartItems.length}) item(s)</h3>
           <p><h3>£{getCartSubTotal().toFixed(2)} <span className="VATtext">ex VAT</span></h3></p>
           <button className="checkoutbtn">Proceed To Checkout</button>
           </div>
+        }
+         
         </div>
     </div>
     );

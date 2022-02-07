@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
 
 // import components
 import Loginbanner from './components/Loginbanner';
@@ -14,8 +13,6 @@ import Basket from './components/Basket/Basket';
 
 
 function App() {
-
-  const [apiTest, setApiTest] = useState([]);
   
   return (  
     <div className="app">
@@ -26,7 +23,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/product/:id" element={<Product />} />
-                <Route path="/login" element={<LoginPage />} />
+                <Route path="/auth/login" element={<LoginPage />} />
                 <Route path="/basket" element={<Basket />} />
             </Routes>
           </Router>
